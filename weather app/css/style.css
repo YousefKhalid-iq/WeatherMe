@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
-/* Trocchi font code:- font-family: 'Trocchi', serif; 
+/* 
+   FONTS
+   Trocchi font code:- font-family: 'Trocchi', serif; 
    Titan one font code:- font-family: 'Titan One', cursive;
 */
 
@@ -13,9 +15,74 @@ header {
 }
 
 nav {
-  position: fixed;
+  background-color: #98D8FF;
+  display: flex;
+  padding: 15px 0 15px 20px;
+}
+
+.title {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
 }
 
 .logo-img {
-  width: 50px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+}
+
+.close-icon {
+  display: none;
+  width: 30px;
+  position: absolute;
+  right:20px;
+}
+
+.temp-scales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.temp-scales p {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+  padding: 0 10px;
+}
+
+.toggle-btn {
+  width: 30px;
+  height: 15px;
+  background: #3B3A3A;
+  border-radius:30px;
+  padding: 3px;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn > .inner-circle {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn.active {
+  background: #3B3A3A;
+}
+
+.toggle-btn.active > .inner-circle {
+  margin-left: 14px;
+}
+
+.header-links a {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
 }
