@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Trocchi font code:- font-family: 'Trocchi', serif; 
+   Titan one font code:- font-family: 'Titan One', cursive;
+*/
+
+header {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+}
+
+.logo-img {
+  width: 50px;
+}
