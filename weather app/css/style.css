@@ -35,20 +35,31 @@ nav {
   width: 30px;
   position: absolute;
   right: 20px;
+  cursor: pointer;
+}
+
+.drop-down-menu {
+  background-color: #EBEBEB;
+  width: 200px;
+  padding: 20px 0;
+  position: absolute;
+  left:0;
+  right: 0;
+  margin: 10px auto;
 }
 
 .close-icon {
-  display: none;
-  width: 30px;
-  position: absolute;
-  right:20px;
+  width: 15px;
+  display: block;
+  margin: 0 85%;
+  cursor: pointer;
 }
 
 .temp-scales {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .temp-scales p {
@@ -62,8 +73,9 @@ nav {
   height: 15px;
   background: #3B3A3A;
   border-radius:30px;
-  padding: 3px;
+  padding: 2.5px 3px;
   transition: all 300ms ease-in-out;
+  cursor: pointer;
 }
 
 .toggle-btn > .inner-circle {
@@ -82,7 +94,28 @@ nav {
   margin-left: 14px;
 }
 
+.header-links {
+  text-align: center;
+}
+
+.header-links li {
+  list-style: none;
+  padding: 8px 0;
+}
+
 .header-links a {
   font-family: 'Titan One', cursive;
   color: #3B3A3A;
+  text-decoration: none;
+}
+
+.main-bg-section {
+  background-image: url('/weather app/images/main-images/nyc.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 40% 0;
+}
+
+.main-bg-section h1 {
+  text-align: right;
 }
