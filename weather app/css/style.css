@@ -111,10 +111,6 @@ nav {
   text-decoration: none;
 }
 
-main {
-
-}
-
 .main-img {
   width: 100%;
   display: block;
@@ -125,19 +121,23 @@ main {
   text-align: right;
 }
 
-.main-bg-section h1 {
-  
-}
-
 .main-img-text {
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   right: 25%;
   color: #fff;
   font-family: 'Trocchi', serif;
   font-weight: 300;
 }
 
-.swap-btn-img {
-  width: 100%;
+.buttons-section {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.swap-btn-img {
+  display: block;
+}
+
