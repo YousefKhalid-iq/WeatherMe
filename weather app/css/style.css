@@ -46,6 +46,8 @@ nav {
   left:0;
   right: 0;
   margin: 10px auto;
+  z-index: 1;
+  display: none;
 }
 
 .close-icon {
@@ -109,13 +111,33 @@ nav {
   text-decoration: none;
 }
 
+main {
+
+}
+
+.main-img {
+  width: 100%;
+  display: block;
+}
+
 .main-bg-section {
-  background-image: url('/weather app/images/main-images/nyc.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 40% 0;
+  position: relative;
+  text-align: right;
 }
 
 .main-bg-section h1 {
-  text-align: right;
+  
+}
+
+.main-img-text {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  color: #fff;
+  font-family: 'Trocchi', serif;
+  font-weight: 300;
+}
+
+.swap-btn-img {
+  width: 100%;
 }
