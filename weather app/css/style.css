@@ -141,3 +141,10 @@ nav {
   display: block;
 }
 
+.daily-weather-cont {
+  display: flex;
+}
+
+.weather-icon {
+  width: 50px;
+}
