@@ -141,10 +141,72 @@ nav {
   display: block;
 }
 
+.weather-forecast {
+  padding-left: 20px;
+}
+
 .daily-weather-cont {
   display: flex;
+  border-bottom: 2px solid #3B3A3A;
+  width: 100px;
+  margin: 0 20px;
+  padding: 20px 0 10px 0;
+}
+
+.local-city-p {
+  font-size: 20px;
+  border-bottom:#3B3A3A;
+  margin: 0 20px;
+}
+
+.daily-weather-cont p, .local-city-p {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+  line-height: 55px;
+}
+
+.date-p {
+  padding-right: 10px;
+}
+
+.temp-p {
+  padding-left: 10px;
 }
 
 .weather-icon {
   width: 50px;
+  height: 50px;
+  margin: 0 10px;
 }
+
+.small1 {
+  width: 55px;
+  height: 55px;
+}
+
+.small2 {
+  width: 60px;
+  height: 60px;
+}
+
+.contact-section {
+  margin: 50px 0;
+}
+
+.contact-btn {
+  text-align: center;
+}
+
+.contact-btn button {
+  background-color: #98D8FF;
+  color: #3B3A3A;
+  font-family: 'Titan One', cursive;
+  border: thick solid #3B3A3A;
+  padding: 20px 50px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #3B3A3A;
+}
+
