@@ -30,11 +30,23 @@ nav {
   margin-left: 10px;
 }
 
+.toggle-on-cont {
+  position: absolute;
+  right: 20px;
+}
+
+.toggle-on {
+  background: transparent;
+  border-width: 0; 
+}
+
+.toggle-on:hover {
+  opacity: 0.7;
+}
+
 .hamburger-icon {
   display: block;
   width: 30px;
-  position: absolute;
-  right: 20px;
   cursor: pointer;
 }
 
@@ -50,10 +62,28 @@ nav {
   display: none;
 }
 
+.press {
+  display: block;
+}
+
+.toggle-off-cont {
+  text-align: left;
+  width: 15px;
+  margin-left: 15px;
+}
+
+.toggle-off {
+  background: transparent;
+  border-width: 0;
+}
+
+.toggle-off:hover {
+  opacity: 0.7;
+}
+
 .close-icon {
   width: 15px;
   display: block;
-  margin: 0 85%;
   cursor: pointer;
 }
 
@@ -76,8 +106,8 @@ nav {
   background: #3B3A3A;
   border-radius:30px;
   padding: 2.5px 3px;
-  transition: all 300ms ease-in-out;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .toggle-btn > .inner-circle {
@@ -204,9 +234,47 @@ nav {
   border: thick solid #3B3A3A;
   padding: 20px 50px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 footer {
   background-color: #3B3A3A;
+  padding-top: 10px;
 }
 
+.footer-links {
+  text-align: center;
+}
+
+.footer-links li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Titan One', cursive;
+}
+
+.spaced-link {
+  padding-top: 30px !important; 
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-socials li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+.footer-copyright {
+  font-family: 'Trocchi', serif;
+  color: #A2A2A2;
+  padding: 10px;
+}

@@ -16,14 +16,22 @@
   <header>
     <nav>
       <h1 class="title">WeatherMe</h1>
-      <img class="logo-img" src="/weather app/images/rain.png" alt="" role="presentation">
-      <img class="hamburger-icon" src="/weather app/images/more.png" alt="" role="presentation">
+      <img class="logo-img" src="/weather app/images/rain.png" alt="" role="button">
+      <div class="toggle-on-cont">
+        <button class="toggle-on">
+          <img class="hamburger-icon" src="/weather app/images/more.png" alt="" role="presentation">
+        </button>
+      </div>
     </nav>
     <div class="drop-down-menu">
-      <img class="close-icon" src="/weather app/images/close.png" alt="" role=""presentation>
+      <div class="toggle-off-cont">
+        <button class="toggle-off">
+          <img class="close-icon" src="/weather app/images/close.png" alt="" role="button">
+        </button>
+      </div>
       <div class="temp-scales">
         <p>°F</p>
-        <div class=""container>
+        <div class="container">
           <div class="toggle-btn" onclick="this.classList.toggle('active')">
             <div class="inner-circle"></div>
           </div>
@@ -112,40 +120,44 @@
           <form action=""></form>
         </div>
       </section>
-      <footer>
-        <ul class="footer-links">
-          <li>
-            <a href="#">WeatherMe</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Sign In</a>
-          </li>
-          <li>
-            <a href="#"> Contact Us</a>
-          </li>
-          <li>
-            <a href="#">Report An Issue</a>
-          </li>
-          <li>
-            <a href="#">Give Us Your Feedback</a>
-          </li>
-        </ul>
-        <ul class="footer-socials">
-          <li>
-            <a href="#">
-              <img src="/weather app/images/icon-facebook.svg" alt="" role="link">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/weather app/images/icon-twitter.svg" alt="" role="link">
-            </a>
-          </li>
-        </ul>
-      </footer>
     </main>
+    <footer>
+      <ul class="footer-links">
+        <li class="links1">
+          <a href="#">WeatherMe</a>
+        </li>
+        <li class="links1">
+          <a href="#">About</a>
+        </li>
+        <li class="links1">
+          <a href="#">Sign In</a>
+        </li>
+        <li class="links1">
+          <a href="#"> Contact Us</a>
+        </li>
+        <li class="links2 spaced-link">
+          <a href="#">Report An Issue</a>
+        </li>
+        <li class="links2">
+          <a href="#">Give Us Your Feedback</a>
+        </li>
+      </ul>
+      <ul class="footer-socials">
+        <li>
+          <a href="#">
+            <img src="/weather app/images/icon-facebook.svg" alt="" role="link">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/weather app/images/icon-twitter.svg" alt="" role="link">
+          </a>
+        </li>
+      </ul>
+      <p class="footer-copyright">
+        @Copyright 2022
+      </p>
+    </footer>
+    <script src="/weather app/js/main.js"></script>
 </body>
 </html>
