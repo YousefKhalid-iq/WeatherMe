@@ -184,6 +184,8 @@ nav {
   object-fit: cover;
 }
 
+/* manual navigation */
+
 .navigation-manual {
   position: absolute;
   width: 100%;
@@ -209,6 +211,10 @@ nav {
 .manual-btn:hover {
   background: #fff;
 }
+
+/* end of manual navigation */
+
+/* radio btns effect when pressed */
 
 #radio1:checked ~ .first {
   margin-left: 0;
@@ -237,6 +243,61 @@ nav {
 #radio7:checked ~ .first {
   margin-left: -85.74%;
 }
+
+/* end of radio btns effect when pressed */
+
+/* automatic navigation */
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-bottom: 40px;
+}
+
+.navigation-auto div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #fff;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #fff;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+  background: #fff;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+  background: #fff;
+}
+
+/* end of automatic navigation */
 
 .main-img-text {
   position: absolute;
