@@ -56,39 +56,107 @@
   </header>
     <main>
       <section class="main-bg-section">
-        <div>
-          <img class="main-img" src="/weather app/images/main-images/nyc.jpg" alt="an image of the statue of liberty">
-          <h2 class="main-img-text">
-          NYC, US
-            <br>
-            -6°C/22°F
-          </h2>
-        </div>
-        <div class="buttons-section">
-          <img class="swap-img-btn" src="/weather app/images/record.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
-          <img class="swap-img-btn" src="/weather app/images/rec.png" alt="" role="button">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
+            <div class="slide first">
+              <img class="main-img" src="/weather app/images/main-images/nyc.jpg" alt="an image of the statue of liberty">
+              <h2 class="main-img-text">
+                NYC, US
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/london.jpg" alt="an image of the Big Ben">
+              <h2 class="main-img-text">
+                LONDON, UK
+                <br>
+                2°C/35°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
+              <h2 class="main-img-text">
+                PARIS, FRANCE
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
+              <h2 class="main-img-text">
+                RIO DE JANEIRO, BRAZIL
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/dubai.jpg" alt="an image of the city Dubai">
+              <h2 class="main-img-text">
+                DUBAI, UAE
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
+              <h2 class="main-img-text">
+                ISTANBUL, TURKEY
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/bangkok.jpg" alt="an image of the city Bangkok">
+              <h2 class="main-img-text">
+                BANGKOK, THAILLAND
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              <div class="auto-btn5"></div>
+              <div class="auto-btn6"></div>
+              <div class="auto-btn7"></div>
+            </div>
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+              <label for="radio5" class="manual-btn"></label>
+              <label for="radio6" class="manual-btn"></label>
+              <label for="radio7" class="manual-btn"></label>
+            </div>
+          </div>
         </div>
       </section>
       <section class="weather-forecast">
         <p class="local-city-p">Baghdad, IQ</p>
         <div class="daily-weather-cont">
           <p class="date-p">Today</p>
-          <img class="weather-icon small1" src="/weather app/images/clear-sky-mobile.png" alt="" role="presentation">
+          <img class="weather-icon" class="weather-icon small1" src="/weather app/images/clear-sky-mobile.png" alt="" role="presentation">
           <p>21°C</p>
         </div>
         <div class="daily-weather-cont">
           <p class="date-p">Tomorrow</p>
-          <img class="weather-icon small2" src="/weather app/images/rainy-mobile.png" alt="" role="presentation">
+          <img class="weather-icon" class="weather-icon small2" src="/weather app/images/rainy-mobile.png" alt="" role="presentation">
           <p>18°C</p>
         </div>
         <div class="daily-weather-cont">
           <p class="date-p">18/2</p>
-          <img class="weather-icon" src="/weather app/images/rainy-day-mobile.png" alt="" role="presentation">
+          <img class="weather-icon" class="weather-icon" src="/weather app/images/rainy-day-mobile.png" alt="" role="presentation">
           <p>16°C</p>
         </div>
         <div class="daily-weather-cont">

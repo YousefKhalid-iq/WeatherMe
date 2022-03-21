@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+  /*scrollbar::-webkit*/
+}
+
 /* 
    FONTS
    Trocchi font code:- font-family: 'Trocchi', serif; 
@@ -143,6 +148,7 @@ nav {
 
 .main-img {
   width: 100%;
+  height: 50%;
   display: block;
 }
 
@@ -151,24 +157,96 @@ nav {
   text-align: right;
 }
 
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  width: 800%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 14.29%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-bottom: 40px;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -14.29%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -28.58%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -42.87%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -57.16%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -71.45%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -85.74%;
+}
+
 .main-img-text {
   position: absolute;
-  bottom: 30%;
-  right: 25%;
   color: #fff;
   font-family: 'Trocchi', serif;
   font-weight: 300;
-}
-
-.buttons-section {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.swap-btn-img {
-  display: block;
+  bottom: 20%;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
 }
 
 .weather-forecast {
@@ -277,4 +355,8 @@ footer {
   font-family: 'Trocchi', serif;
   color: #A2A2A2;
   padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  
 }
