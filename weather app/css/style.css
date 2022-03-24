@@ -418,6 +418,35 @@ footer {
   padding: 10px;
 }
 
+/* about page styling */
+
+.main-content-about {
+ background-color: #98D8FF;
+ border-top: medium solid #3B3A3A;
+ padding: 100px 0;
+ 
+}
+
+.about-desc, .madeby-p {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.8rem;
+}
+
+.madeby-p {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.madeby-p a {
+  text-decoration: none;
+  color: #1323FB;
+}
+
 @media only screen and (max-width: 768px) {
   
 }
