@@ -49,19 +49,30 @@
           <a href="about.html">About</a>
         </li>
         <li>
-          <a href="signin.html">Sign In</a>
+          <a href="#">Sign In</a>
         </li>
       </ul>
     </div>
   </header>
   <main>
     <section class="main-content-about">
-      <h2 class="about-desc">
-        WeatherMe is a website dedicated to give the users accurate weather readings whether depending on your current location or your searched location using the Search tool.
-      </h2>
-      <p class="madeby-p">
-        This website is made by <a class="personal-link" href="#">YOUSEF KHALID</a>
-      </p>
+      <div id="error"></div>
+      <form id="form" action="" method="GET">
+        <div>
+          <label for="name">Email</label>
+          <input type="name" name="name" id="name">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+        </div>
+        <div>
+          <button type="submit">Reset</button>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </section>
   </main>
   <footer>
@@ -73,7 +84,7 @@
         <a href="about.html">About</a>
       </li>
       <li class="links1">
-        <a href="signin.html">Sign In</a>
+        <a href="#">Sign In</a>
       </li>
       <li class="links1">
         <a href="#"> Contact Us</a>
@@ -102,5 +113,6 @@
     </p>
   </footer>
   <script src="/weather app/js/about.js"></script>
+  <script src="/weather app/js/signin.js"></script>
 </body>
 </html>
