@@ -55,24 +55,23 @@
     </div>
   </header>
   <main>
-    <section class="main-content-about">
-      <div id="error"></div>
-      <form id="form" action="" method="GET">
-        <div>
-          <label for="name">Email</label>
-          <input type="name" name="name" id="name">
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
-        </div>
-        <div>
-          <button type="submit">Reset</button>
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
+    <section class="main-content-signin">
+      <h2 class="signin-head">Sign In</h2>
+      <form action="" class="signin-form">
+          <label for="name" class="email-label">Email</label>
+          <input type="email" id="email" name="name" required>
+          <label for="password" class="password-label">Password</label>
+          <input type="password" id="password" name="password" required>
+          <label for="password" class="re-password-label">Re-Enter Password</label>
+          <input type="password" id="re-password" required>
+          <div>
+            <button class="sign-in-btn" type="submit">Sign In</button>
+          </div>
       </form>
+      <div class="signup-cont">
+        <p class="no-acc-p">Don't have an account?</p>
+        <button class="sign-up-btn">Sign up</button>
+      </div>
     </section>
   </main>
   <footer>
