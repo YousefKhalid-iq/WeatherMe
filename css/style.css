@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* 
+   FONTS
+   Trocchi font code:- font-family: 'Trocchi', serif; 
+   Titan one font code:- font-family: 'Titan One', cursive;
+*/
+
+header {
+  width: 100%;
+}
+
+nav {
+  background-color: #ec6e4c;
+  display: flex;
+  padding: 15px 0 15px 20px;
+}
+
+.title {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+}
+
+.logo-img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.toggle-on-cont {
+  position: absolute;
+  right: 20px;
+}
+
+.toggle-on {
+  background: transparent;
+  border-width: 0; 
+}
+
+.toggle-on:hover {
+  opacity: 0.7;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  cursor: pointer;
+}
+
+.drop-down-menu {
+  background-color: #EBEBEB;
+  width: 200px;
+  padding: 20px 0;
+  position: absolute;
+  left:0;
+  right: 0;
+  margin: 10px auto;
+  z-index: 1;
+  display: none;
+}
+
+.press {
+  display: block;
+}
+
+.toggle-off-cont {
+  text-align: left;
+  width: 15px;
+  margin-left: 15px;
+}
+
+.toggle-off {
+  background: transparent;
+  border-width: 0;
+}
+
+.toggle-off:hover {
+  opacity: 0.7;
+}
+
+.close-icon {
+  width: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+.temp-scales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.temp-scales p {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+  padding: 0 10px;
+}
+
+.toggle-btn {
+  width: 30px;
+  height: 15px;
+  background: #3B3A3A;
+  border-radius:30px;
+  padding: 2.5px 3px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn  .inner-circle {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn.active {
+  background: #3B3A3A;
+}
+
+.toggle-btn.active > .inner-circle {
+  margin-left: 14px;
+}
+
+.header-links {
+  text-align: center;
+}
+
+.header-links li {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.header-links a {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+  text-decoration: none;
+}
+
+.main-img {
+  width: 100%;
+  height: 50%;
+  display: block;
+}
+
+.main-bg-section {
+  position: relative;
+  text-align: right;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  width: 800%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 14.29%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* manual navigation */
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-bottom: 40px;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background: #fff;
+}
+
+/* end of manual navigation */
+
+/* radio btns effect when pressed */
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -14.29%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -28.58%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -42.87%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -57.16%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -71.45%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -85.74%;
+}
+
+/* end of radio btns effect when pressed */
+
+/* automatic navigation */
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-bottom: 40px;
+}
+
+.navigation-auto div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1, #radio2:checked ~ .navigation-auto .auto-btn2, #radio3:checked ~ .navigation-auto .auto-btn3, #radio4:checked ~ .navigation-auto .auto-btn4, #radio5:checked ~ .navigation-auto .auto-btn5, #radio6:checked ~ .navigation-auto .auto-btn6, #radio7:checked ~ .navigation-auto .auto-btn7 {
+  background: #fff;
+}
+
+/* end of automatic navigation */
+
+.main-img-text {
+  position: absolute;
+  color: #fff;
+  font-family: 'Trocchi', serif;
+  font-weight: 300;
+  bottom: 25%;
+  font-size: 20px;
+  padding: 0 10px;
+  backdrop-filter: blur(10px);
+}
+
+.daily-weather-cont {
+  display: flex;
+  border-bottom: 2px solid #3B3A3A;
+  width: 320px;
+  margin: 0 7.5%;
+  padding: 20px 0 10px 0;
+}
+
+.country-city-cont {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.local-city-p, .country {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+  font-size: 20px;
+  border-bottom:#3B3A3A;
+  margin: 0 20px;
+}
+
+.country {
+  margin: 0;
+}
+
+.daily-weather-cont p, .local-city-p {
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+}
+
+.date-p {
+  margin: auto;
+}
+
+.max-weather, .min-weather {
+  text-align: center;
+  margin: auto;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.small1 {
+  width: 55px;
+  height: 55px;
+}
+
+.small2 {
+  width: 60px;
+  height: 60px;
+}
+
+.break-p {
+  padding: 0 5px;
+  margin: auto;
+}
+
+.contact-section {
+  margin: 50px 0;
+}
+
+.contact-btn {
+  text-align: center;
+}
+
+.contact-btn button {
+  background-color: #ec6e4c;
+  color: #3B3A3A;
+  font-family: 'Titan One', cursive;
+  border: thick solid #3B3A3A;
+  padding: 20px 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #3B3A3A;
+  padding-top: 10px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Titan One', cursive;
+}
+
+.spaced-link {
+  padding-top: 30px !important; 
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-socials li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+.footer-copyright {
+  font-family: 'Trocchi', serif;
+  color: #A2A2A2;
+  padding: 10px;
+}
+
+/* about page styling + signin page styling */
+
+.main-content-about, .main-content-signin {
+ background-color: #98D8FF;
+ border-top: medium solid #3B3A3A;
+ padding: 100px 0;
+}
+
+.about-desc, .madeby-p {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.8rem;
+}
+
+.madeby-p {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.madeby-p a {
+  text-decoration: none;
+  color: #1323FB;
+}
+
+.signin-head {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.signin-form {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #EBEBEB;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px #A2A2A2;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-label, .password-label, .re-password-label {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  width: 100%;
+}
+
+#email, #password, #re-password {
+  width: 200px;
+  margin: 10px 0;
+}
+
+.sign-in-btn {
+  width: 200px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.signup-cont {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  display: flex;
+  justify-content: left;
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+.no-acc-p {
+  padding-right: 10px;
+}
+
+.sign-up-btn {
+  background: transparent;
+  border: 0;
+  font-family: 'Titan One', cursive;
+  color: #1323FB;
+}
+
+/* end of about page styling + signin page styling */
+
+@media only screen and (max-width: 768px) {
+  
+}
