@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/weather app/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/weather app/images/rain.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+  </style>
+  <title>WeatherMe</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="title">WeatherMe</h1>
+      <img class="logo-img" src="/weather app/images/rain.png" alt="" role="button">
+      <div class="toggle-on-cont">
+        <button class="toggle-on">
+          <img class="hamburger-icon" src="/weather app/images/more.png" alt="" role="presentation">
+        </button>
+      </div>
+    </nav>
+    <div class="drop-down-menu">
+      <div class="toggle-off-cont">
+        <button class="toggle-off">
+          <img class="close-icon" src="/weather app/images/close.png" alt="" role="button">
+        </button>
+      </div>
+      <div class="temp-scales">
+        <p>°C</p>
+        <div class="container" id="container">
+          <div id="toggle-btn" class="toggle-btn" onclick="btnToggle()">
+            <!-- onclick="this.classList.toggle('active')"-->
+            <div class="inner-circle"></div>
+          </div>
+        </div>
+        <p>°F</p>
+      </div>
+      <ul class="header-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">Search</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="signin.html">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+    <main>
+      <section class="main-bg-section">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
+            <div class="slide first">
+              <img class="main-img" src="/weather app/images/main-images/nyc.jpg" alt="an image of the statue of liberty">
+              <h2 class="main-img-text">
+                NYC, US
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/london.jpg" alt="an image of the Big Ben">
+              <h2 class="main-img-text">
+                LONDON, UK
+                <br>
+                2°C/35°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
+              <h2 class="main-img-text">
+                PARIS, FRANCE
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
+              <h2 class="main-img-text">
+                RIO DE JANEIRO, BRAZIL
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/dubai.jpg" alt="an image of the city Dubai">
+              <h2 class="main-img-text">
+                DUBAI, UAE
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
+              <h2 class="main-img-text">
+                ISTANBUL, TURKEY
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="slide">
+              <img class="main-img" src="/weather app/images/main-images/bangkok.jpg" alt="an image of the city Bangkok">
+              <h2 class="main-img-text">
+                BANGKOK, THAILLAND
+                <br>
+                -6°C/22°F
+              </h2>
+            </div>
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              <div class="auto-btn5"></div>
+              <div class="auto-btn6"></div>
+              <div class="auto-btn7"></div>
+            </div>
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+              <label for="radio5" class="manual-btn"></label>
+              <label for="radio6" class="manual-btn"></label>
+              <label for="radio7" class="manual-btn"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="weather-forecast" id="weather-forecast">
+        <div class="country-city-cont">
+          <p class="local-city-p" id="local-city-p">Baghdad,</p>
+          <p class="country" id="country">IQ</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Monday 4/4</p>
+          <img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">21°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Tuesday 5/4</p>
+          <img class="weather-icon" class="weather-icon small2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">18°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Wednesday 6/4</p>
+          <img class="weather-icon" class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">16°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Thursday 7/4</p>
+          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">25°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Friday 8/4</p>
+          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">3°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Saturday 9/4</p>
+          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">0°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+        <div class="daily-weather-cont">
+          <p class="date-p">Sunday 10/4</p>
+          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+          <p id="max-temp">-1°C</p>
+          <p class="break-p">||</p>
+          <p id="min-temp">-3°C</p>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="contact-btn">
+          <button>Contact Us</button>
+        </div>
+        <div class="contact-menu">
+          <form action=""></form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-links">
+        <li class="links1">
+          <a href="index.html">WeatherMe</a>
+        </li>
+        <li class="links1">
+          <a href="about.html">About</a>
+        </li>
+        <li class="links1">
+          <a href="signin.html">Sign In</a>
+        </li>
+        <li class="links1">
+          <a href="#"> Contact Us</a>
+        </li>
+        <li class="links2 spaced-link">
+          <a href="#">Report An Issue</a>
+        </li>
+        <li class="links2">
+          <a href="#">Give Us Your Feedback</a>
+        </li>
+      </ul>
+      <ul class="footer-socials">
+        <li>
+          <a href="#">
+            <img src="/weather app/images/icon-facebook.svg" alt="" role="link">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/weather app/images/icon-twitter.svg" alt="" role="link">
+          </a>
+        </li>
+      </ul>
+      <p class="footer-copyright">
+        @Copyright 2022
+      </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/weather app/js/main.js"></script>
+</body>
