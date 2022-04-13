@@ -21,8 +21,7 @@ const button = document.getElementById('container');
 const toggle = document.getElementById('toggle-btn');
 
 function btnToggle() {
-	if (lol != true) {
-		function getWeatherData() {
+	if (toggleAct != true) {
 			navigator.geolocation.getCurrentPosition((success) => {
 				let {latitude, longitude} = success.coords;
 				fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
@@ -30,12 +29,41 @@ function btnToggle() {
 					showWeatherData(data);
 				})		
 			})
-		}
-	} 	
+		console.log('lol')
+		function showWeatherData (data){
+
+			timezone.innerHTML = data.timezone;
+	
+			let otherDayForcast = '';
+			data.daily.forEach((day, idx) => {
+			if(idx !=0){
+				otherDayForcast +=
+				`
+				<div class="daily-weather-cont">
+					<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
+					<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
+					<p ${'class="max-weather"'}>${day.temp.max + ' °F'}</p>
+					<p class="break-p">||</p>
+					<p ${'class="min-weather"'}>${day.temp.min + ' °F'}</p>
+				</div>
+			`
+			}
+		})
+		weatherForecastEl.innerHTML = otherDayForcast;
+	}
+	} else if(toggleAct == true) {
+		navigator.geolocation.getCurrentPosition((success) => {
+			let {latitude, longitude} = success.coords;
+			fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+				//console.log(data);
+				showWeatherData(data);
+			})		
+		})
+	}
 	getWeatherData()
 }
 
-let lol = button.addEventListener("click", function() {
+let toggleAct = button.addEventListener("click", function() {
 	toggle.classList.toggle('active');
 })
 
@@ -58,9 +86,8 @@ setInterval(function() {
 // OPENWEATHERMAP API //
 
 const timezone = document.getElementById('local-city-p');
-const country = document.getElementById('country');
 const weatherForecastEl = document.getElementById('weather-forecast');
-const currentTempEl = document.getElementById('current-temp');
+const currentTempEl = document.getElementById('current-weather');
 
 const API_KEY = 'd684266e7037509f2bb5963473d09819';
 
@@ -76,10 +103,14 @@ function getWeatherData() {
 }
 
 function showWeatherData (data){
+
+		timezone.innerHTML = data.timezone;
+
 		let otherDayForcast = '';
 		data.daily.forEach((day, idx) => {
 		if(idx !=0){
-			otherDayForcast += `
+			otherDayForcast +=
+			`
 			<div class="daily-weather-cont">
 				<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
 				<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">

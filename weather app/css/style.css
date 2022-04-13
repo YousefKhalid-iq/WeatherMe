@@ -294,21 +294,13 @@ nav {
 }
 
 .country-city-cont {
-  display: flex;
-  align-items: center;
-  text-align: left;
+  margin: 0 7.5%;
 }
 
-.local-city-p, .country {
-  font-family: 'Titan One', cursive;
-  color: #3B3A3A;
+.local-city-p {
   font-size: 20px;
   border-bottom:#3B3A3A;
-  margin: 0 20px;
-}
-
-.country {
-  margin: 0;
+  padding-top: 30px;
 }
 
 .daily-weather-cont p, .local-city-p {
@@ -317,7 +309,8 @@ nav {
 }
 
 .date-p {
-  margin: auto;
+  margin: auto 0;
+  text-align: left;
 }
 
 .max-weather, .min-weather {
