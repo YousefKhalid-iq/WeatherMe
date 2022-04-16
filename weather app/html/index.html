@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherMe</title>
   <link rel="stylesheet" href="/weather app/css/style.css">
   <link rel="icon" type="image/x-icon" href="/weather app/images/rain.png">
+  <script src="https://kit.fontawesome.com/c976e8a532.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
   </style>
-  <title>WeatherMe</title>
 </head>
 <body>
   <header>
@@ -19,7 +20,7 @@
       <img class="logo-img" src="/weather app/images/rain.png" alt="" role="button">
       <div class="toggle-on-cont">
         <button class="toggle-on">
-          <img class="hamburger-icon" src="/weather app/images/more.png" alt="" role="presentation">
+          <img class="hamburger-icon" src="/weather app/images/more.png" alt="" role="img">
         </button>
       </div>
     </nav>
@@ -31,20 +32,25 @@
       </div>
       <div class="temp-scales">
         <p>°C</p>
-        <div class="container" id="container">
-          <div id="toggle-btn" class="toggle-btn" onclick="btnToggle()">
-            <!-- onclick="this.classList.toggle('active')"-->
-            <div class="inner-circle"></div>
-          </div>
+        <div class="toggle-btn-cont" id="toggle-btn-cont">
+          <button title="Temperature Scales" class="toggle-btn" onclick="btnToggle()" aria-label="Switch temperature scales from metric to imperial and vice versa">
+            <img src="/weather app/images/arrow.png" alt="" role="img" class="arrow-btn" id="arrow-btn">
+          </button>
         </div>
         <p>°F</p>
+      </div>
+      <div class="search-form-cont">
+        <form id="search-form" class="search-form" role="search">
+          <label for="searchbar">Enter a new location</label>
+          <input id="searchbar" class="searchbar" type="text" role="searchbox" autocomplete="off" placeholder="City, State, Country">
+          <button id="searchbar-btn" class="searchbar-btn" title="Submit Location" aria-label="Enter Zip Code or City, State, and Country to retrieve the weather">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
       </div>
       <ul class="header-links">
         <li>
           <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="#">Search</a>
         </li>
         <li>
           <a href="about.html">About</a>
@@ -243,6 +249,6 @@
         @Copyright 2022
       </p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/weather app/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/weather app/js/main.js"></script>
 </body>

@@ -8,6 +8,19 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
 /* 
    FONTS
    Trocchi font code:- font-family: 'Trocchi', serif; 
@@ -33,6 +46,8 @@ nav {
   width: 30px;
   margin-left: 10px;
 }
+
+/* Dropdown Menu styling */
 
 .toggle-on-cont {
   position: absolute;
@@ -105,29 +120,21 @@ nav {
 }
 
 .toggle-btn {
-  width: 30px;
-  height: 15px;
-  background: #3B3A3A;
+  background-color: #ec6e4c;
   border-radius:30px;
   padding: 2.5px 3px;
   cursor: pointer;
+  border: 0;
   transition: all 300ms ease-in-out;
 }
 
-.toggle-btn  .inner-circle {
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 50%;
+.arrow-btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  transform: rotate(90deg);
   transition: all 300ms ease-in-out;
-}
-
-.toggle-btn.active {
-  background: #3B3A3A;
-}
-
-.toggle-btn.active > .inner-circle {
-  margin-left: 14px;
 }
 
 .header-links {
@@ -144,6 +151,8 @@ nav {
   color: #3B3A3A;
   text-decoration: none;
 }
+
+/* End of Dropdown Menu styling */
 
 .main-img {
   width: 100%;
@@ -491,4 +500,3 @@ footer {
 @media only screen and (max-width: 768px) {
   
 }
-

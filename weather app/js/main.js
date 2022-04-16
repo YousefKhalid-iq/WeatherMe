@@ -17,55 +17,20 @@ toggleOff.addEventListener("click", function() {
 
 // toggle C -> F feature //
 
-const button = document.getElementById('container');
-const toggle = document.getElementById('toggle-btn');
-
 function btnToggle() {
-	if (toggleAct != true) {
-			navigator.geolocation.getCurrentPosition((success) => {
-				let {latitude, longitude} = success.coords;
-				fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
-					//console.log(data);
-					showWeatherData(data);
-				})		
-			})
-		console.log('lol')
-		function showWeatherData (data){
-
-			timezone.innerHTML = data.timezone;
+	let arrow = document.getElementById('arrow-btn');
+	if (units === "metric") {
+		units = "imperial";
+		tempScale = ' °F';
+		arrow.style.transform="rotate(270deg)";
 	
-			let otherDayForcast = '';
-			data.daily.forEach((day, idx) => {
-			if(idx !=0){
-				otherDayForcast +=
-				`
-				<div class="daily-weather-cont">
-					<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
-					<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
-					<p ${'class="max-weather"'}>${day.temp.max + ' °F'}</p>
-					<p class="break-p">||</p>
-					<p ${'class="min-weather"'}>${day.temp.min + ' °F'}</p>
-				</div>
-			`
-			}
-		})
-		weatherForecastEl.innerHTML = otherDayForcast;
-	}
-	} else if(toggleAct == true) {
-		navigator.geolocation.getCurrentPosition((success) => {
-			let {latitude, longitude} = success.coords;
-			fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
-				//console.log(data);
-				showWeatherData(data);
-			})		
-		})
+	} else {
+		units = "metric";
+		tempScale = ' °C'
+		arrow.style.transform="rotate(90deg)";
 	}
 	getWeatherData()
 }
-
-let toggleAct = button.addEventListener("click", function() {
-	toggle.classList.toggle('active');
-})
 
 // end of toggle C -> F feature //
 
@@ -90,17 +55,20 @@ const weatherForecastEl = document.getElementById('weather-forecast');
 const currentTempEl = document.getElementById('current-weather');
 
 const API_KEY = 'd684266e7037509f2bb5963473d09819';
+let units = "metric";
 
 getWeatherData()
 function getWeatherData() {
 	navigator.geolocation.getCurrentPosition((success) => {
 		let {latitude, longitude} = success.coords;
-		fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+		fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=${units}&appid=${API_KEY}`).then(res => res.json()).then(data => {
 			//console.log(data);
 			showWeatherData(data);
 		})		
 	})
 }
+
+let tempScale = ' °C';
 
 function showWeatherData (data){
 
@@ -114,9 +82,9 @@ function showWeatherData (data){
 			<div class="daily-weather-cont">
 				<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
 				<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
-				<p ${'class="max-weather"'}>${day.temp.max + ' °C'}</p>
+				<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
 				<p class="break-p">||</p>
-				<p ${'class="min-weather"'}>${day.temp.min + ' °C'}</p>
+				<p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
 			</div>
 		`
 		}
