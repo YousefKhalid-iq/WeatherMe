@@ -120,7 +120,6 @@ nav {
 }
 
 .toggle-btn {
-  background-color: #ec6e4c;
   border-radius:30px;
   padding: 2.5px 3px;
   cursor: pointer;
@@ -150,6 +149,47 @@ nav {
   font-family: 'Titan One', cursive;
   color: #3B3A3A;
   text-decoration: none;
+}
+
+.search-form {
+  width: 100%;
+  text-align: center;
+}
+
+.search-label {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  font-size: 14px;
+}
+
+.searchbar {
+  border: 0;
+  padding: 5px;
+  width: 80%;
+  margin: 5px 0 10px 0;
+  font-family: 'Titan One', cursive;
+  color: #3B3A3A;
+}
+
+.searchbar::-webkit-input-placeholder {
+  font-size: 8px;
+  opacity: 0.5;
+  color: #3B3A3A;
+}
+
+.searchbar:focus {
+  outline-width: 0;
+}
+
+.searchbar-btn {
+  padding: 3px;
+  border: 0;
+  cursor: pointer;
+  background: 0;
+}
+
+.searchbar-btn:hover {
+  opacity: 0.7;
 }
 
 /* End of Dropdown Menu styling */
@@ -411,7 +451,6 @@ footer {
 /* about page styling + signin page styling */
 
 .main-content-about, .main-content-signin {
- background-color: #98D8FF;
  border-top: medium solid #3B3A3A;
  padding: 100px 0;
 }
@@ -500,3 +539,4 @@ footer {
 @media only screen and (max-width: 768px) {
   
 }
+

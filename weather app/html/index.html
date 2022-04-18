@@ -41,7 +41,7 @@
       </div>
       <div class="search-form-cont">
         <form id="search-form" class="search-form" role="search">
-          <label for="searchbar">Enter a new location</label>
+          <label class="search-label" for="searchbar">Enter a new location</label>
           <input id="searchbar" class="searchbar" type="text" role="searchbox" autocomplete="off" placeholder="City, State, Country">
           <button id="searchbar-btn" class="searchbar-btn" title="Submit Location" aria-label="Enter Zip Code or City, State, and Country to retrieve the weather">
             <i class="fa fa-search"></i>
@@ -72,60 +72,67 @@
             <input type="radio" name="radio-btn" id="radio5">
             <input type="radio" name="radio-btn" id="radio6">
             <input type="radio" name="radio-btn" id="radio7">
-            <div class="slide first">
+            <div id="nyc-temp" class="slide first">
               <img class="main-img" src="/weather app/images/main-images/nyc.jpg" alt="an image of the statue of liberty">
               <h2 class="main-img-text">
                 NYC, US
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="london-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/london.jpg" alt="an image of the Big Ben">
               <h2 class="main-img-text">
                 LONDON, UK
                 <br>
-                2°C/35°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="paris-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
               <h2 class="main-img-text">
                 PARIS, FRANCE
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="rio-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
               <h2 class="main-img-text">
                 RIO DE JANEIRO, BRAZIL
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="dubai-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/dubai.jpg" alt="an image of the city Dubai">
               <h2 class="main-img-text">
                 DUBAI, UAE
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="istanbul-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
               <h2 class="main-img-text">
                 ISTANBUL, TURKEY
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
-            <div class="slide">
+            <div id="bangkok-temp" class="slide">
               <img class="main-img" src="/weather app/images/main-images/bangkok.jpg" alt="an image of the city Bangkok">
               <h2 class="main-img-text">
                 BANGKOK, THAILLAND
                 <br>
-                -6°C/22°F
+                <span id="temp-city-max">-6°C /</span>
+                <span id="temp-city-min">26°C</span>
               </h2>
             </div>
             <div class="navigation-auto">
@@ -151,6 +158,13 @@
       </section>
       <div class="country-city-cont">
         <p class="local-city-p" id="local-city-p">Asia/Baghdad</p>
+      </div>
+      <div class="daily-weather-cont" id="current-weather">
+        <p class="date-p">Monday 4/4</p>
+        <img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
+        <p id="max-temp">21°C</p>
+        <p class="break-p">||</p>
+        <p id="min-temp">-3°C</p>
       </div>
       <section class="weather-forecast" id="weather-forecast">
         <div class="daily-weather-cont" id="current-weather">
