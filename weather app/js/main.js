@@ -36,7 +36,6 @@ function btnToggle() {
 	dubaiWeather()
 	istanbulWeather()
 	bangkokWeather()
-
 }
 
 // end of toggle C -> F feature //
@@ -137,6 +136,7 @@ function showWeatherNyc (data) {
 	}
 	})
 }
+
 
 // London Call
 
@@ -313,5 +313,7 @@ function showWeatherBangkok (data) {
 }
 
 // End Calling Weather for cities in main
+
+// Search Functionality 
 
 // End of OPENWEATHERMAP API //
