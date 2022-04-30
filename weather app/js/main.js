@@ -343,4 +343,6 @@ searchBtn.addEventListener('click', function() {
 	errorMsg.innerHTML = "You've entered an invalid city name, please try again")
 })
 
+// End of Search Functionality
+
 // End of OPENWEATHERMAP API //
