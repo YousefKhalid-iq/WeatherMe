@@ -27,6 +27,16 @@ body {
    Titan one font code:- font-family: 'Titan One', cursive;
 */
 
+@media only screen and (max-width: 375px) {
+  .slide img {
+    height: 300px !important;
+  }
+
+  .daily-weather-cont {
+    font-size: 12px;
+  }
+}
+
 header {
   width: 100%;
 }
@@ -57,6 +67,7 @@ nav {
 .toggle-on {
   background: transparent;
   border-width: 0; 
+  transition: all 0.3s ease-in-out;
 }
 
 .toggle-on:hover {
@@ -71,18 +82,20 @@ nav {
 
 .drop-down-menu {
   background-color: #EBEBEB;
-  width: 200px;
+  width: 0px;
   padding: 20px 0;
   position: absolute;
   left:0;
   right: 0;
   margin: 10px auto;
   z-index: 1;
-  display: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .press {
-  display: block;
+  opacity: 1; 
+  width: 200px;
 }
 
 .toggle-off-cont {
@@ -94,6 +107,7 @@ nav {
 .toggle-off {
   background: transparent;
   border-width: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .toggle-off:hover {
@@ -136,6 +150,10 @@ nav {
   transition: all 300ms ease-in-out;
 }
 
+.arrow-btn:hover {
+  opacity: 0.7;
+}
+
 .search-label {
   font-family: 'Titan One', cursive;
   color:#3B3A3A;
@@ -146,7 +164,7 @@ nav {
   border: 0;
   padding: 5px;
   width: 80%;
-  margin: 5px 0;
+  margin: 10px 0;
   font-family: 'Titan One', cursive;
   color: #3B3A3A;
   box-shadow: #A2A2A2 0px 0px 10px;
@@ -159,7 +177,9 @@ nav {
 }
 
 .searchbar:focus {
-  outline-width: 0;
+  outline-width: 0.1rem;
+  outline-color: #3B3A3A;
+  outline-style: double;
 }
 
 .searchbar-btn {
@@ -203,7 +223,7 @@ nav {
 
 .search-form-cont {
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -211,13 +231,16 @@ nav {
   font-family: 'Titan One', cursive;
   color: #3B3A3A;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-links a:hover {
+  color: #ec6e4c;
 }
 
 /* End of Dropdown Menu styling */
 
 .main-img {
-  width: 100%;
-  height: 50%;
   display: block;
 }
 
@@ -249,7 +272,7 @@ nav {
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -360,7 +383,7 @@ nav {
 .daily-weather-cont {
   display: flex;
   border-bottom: 2px solid #3B3A3A;
-  width: 320px;
+  max-width: 300px;
   margin: 0 7.5%;
   padding: 20px 0 10px 0;
 }
@@ -427,6 +450,12 @@ nav {
   padding: 20px 50px;
   font-size: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-btn button:hover {
+  background-color: #3B3A3A;
+  color:#ec6e4c;
 }
 
 footer {
@@ -447,6 +476,11 @@ footer {
   color: #fff;
   text-decoration: none;
   font-family: 'Titan One', cursive;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ec6e4c
 }
 
 .spaced-link {
@@ -458,11 +492,24 @@ footer {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .footer-socials li {
   list-style: none;
   margin: 0 8px;
+}
+
+.footer-socials img {
+  transition: all 0.1s ease-in-out;
+}
+
+.footer-socials img:hover {
+  filter: invert(0.4) 
+  sepia(0.5) 
+  saturate(20) 
+  hue-rotate(334.8deg) 
+  brightness(0.85);
 }
 
 .footer-copyright {
@@ -471,95 +518,78 @@ footer {
   padding: 10px;
 }
 
-/* about page styling + signin page styling */
+@media only screen and (min-width: 768px) {
+  .slide img {
+    height: 500px;
+  }
 
-.main-content-about, .main-content-signin {
- border-top: medium solid #3B3A3A;
- padding: 100px 0;
+  .drop-down-menu {
+    margin: 50px auto;
+  }
+
+  .local-city-p {
+    font-size: 24px;
+  }
+
+  .daily-weather-cont {
+    font-size: 18px;
+    max-width: 400px;
+  }
 }
 
-.about-desc, .madeby-p {
-  font-family: 'Titan One', cursive;
-  color:#3B3A3A;
-  font-size: 20px;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1.8rem;
+@media only screen and (min-width: 1440px) {
+  .slide img {
+    height: 750px;
+  }
+
+  .drop-down-menu {
+    margin: 100px auto;
+    width: 350px;
+  }
+
+  .temp-scales p {
+    font-size: 18px;
+  }
+
+  .arrow-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .search-label {
+    font-size: 16px;
+  }
+
+  .local-city-p {
+    font-size: 28px;
+  }
+
+  .daily-weather-cont {
+    font-size: 20px;
+    max-width: 500px;
+  }
+
+  .searchbar {
+    padding: 10px;
+  }
+
+  .searchbar::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+
+  #error-msg-search {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .header-links a {
+    font-size: 18px;
+  }
 }
 
-.madeby-p {
-  font-size: 14px;
-  padding-top: 20px;
-}
-
-.madeby-p a {
-  text-decoration: none;
-  color: #1323FB;
-}
-
-.signin-head {
-  font-family: 'Titan One', cursive;
-  color:#3B3A3A;
-  text-align: left;
-  font-size: 20px;
-  margin-left: 5%;
-}
-
-.signin-form {
-  width: 90%;
-  margin: 20px auto;
-  background-color: #EBEBEB;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px #A2A2A2;
-  padding: 10px;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-}
-
-.email-label, .password-label, .re-password-label {
-  font-family: 'Titan One', cursive;
-  color:#3B3A3A;
-  width: 100%;
-}
-
-#email, #password, #re-password {
-  width: 200px;
-  margin: 10px 0;
-}
-
-.sign-in-btn {
-  width: 200px;
-  background-color: #fff;
-  border: 0;
-  border-radius: 50px;
-  padding: 10px;
-}
-
-.signup-cont {
-  font-family: 'Titan One', cursive;
-  color:#3B3A3A;
-  display: flex;
-  justify-content: left;
-  font-size: 14px;
-  margin-left: 5%;
-}
-
-.no-acc-p {
-  padding-right: 10px;
-}
-
-.sign-up-btn {
-  background: transparent;
-  border: 0;
-  font-family: 'Titan One', cursive;
-  color: #1323FB;
-}
-
-/* end of about page styling + signin page styling */
-
-@media only screen and (max-width: 768px) {
-  
+@media only screen and (min-width: 1920px) {
+  .slide img {
+    height: 800px;
+  }
 }
 
