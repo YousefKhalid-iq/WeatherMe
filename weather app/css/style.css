@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  background-image: linear-gradient(90deg,#eea849, #f29941);
 }
 
 ::-webkit-scrollbar {
@@ -42,7 +43,7 @@ header {
 }
 
 nav {
-  background-color: #ec6e4c;
+  background-image: linear-gradient(90deg,#eea849, #f29941);
   display: flex;
   padding: 15px 0 15px 20px;
 }
@@ -95,7 +96,7 @@ nav {
 
 .press {
   opacity: 1; 
-  width: 200px;
+  width: 250px;
 }
 
 .toggle-off-cont {
@@ -235,7 +236,7 @@ nav {
 }
 
 .header-links a:hover {
-  color: #ec6e4c;
+  color: #f29941;
 }
 
 /* End of Dropdown Menu styling */
@@ -383,9 +384,23 @@ nav {
 .daily-weather-cont {
   display: flex;
   border-bottom: 2px solid #3B3A3A;
-  max-width: 300px;
+  max-width: 500px;
   margin: 0 7.5%;
   padding: 20px 0 10px 0;
+  overflow-x: auto;
+}
+
+.daily-weather-cont::-webkit-scrollbar {
+  height: 10px;
+}
+
+.daily-weather-cont::-webkit-scrollbar-track {
+  background-color: #EBEBEB;
+}
+
+.daily-weather-cont::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
 }
 
 .country-city-cont {
@@ -401,6 +416,7 @@ nav {
 .daily-weather-cont p, .local-city-p {
   font-family: 'Titan One', cursive;
   color: #3B3A3A;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
 }
 
 .date-p {
@@ -411,6 +427,8 @@ nav {
 .max-weather, .min-weather {
   text-align: center;
   margin: auto;
+  width: 120px;
+  white-space: pre;
 }
 
 .weather-icon {
@@ -430,7 +448,7 @@ nav {
 }
 
 .break-p {
-  padding: 0 5px;
+  padding: 0 10px;
   margin: auto;
 }
 
@@ -443,7 +461,7 @@ nav {
 }
 
 .contact-btn button {
-  background-color: #ec6e4c;
+  background-color: #f29941;
   color: #3B3A3A;
   font-family: 'Titan One', cursive;
   border: thick solid #3B3A3A;
@@ -455,7 +473,7 @@ nav {
 
 .contact-btn button:hover {
   background-color: #3B3A3A;
-  color:#ec6e4c;
+  color:#f29941;
 }
 
 footer {
@@ -480,7 +498,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #ec6e4c
+  color:#f29941;
 }
 
 .spaced-link {
@@ -506,9 +524,9 @@ footer {
 
 .footer-socials img:hover {
   filter: invert(0.4) 
-  sepia(0.5) 
-  saturate(20) 
-  hue-rotate(334.8deg) 
+  sepia(0.4) 
+  saturate(15) 
+  hue-rotate(340.8deg) 
   brightness(0.85);
 }
 
@@ -527,13 +545,26 @@ footer {
     margin: 50px auto;
   }
 
+  .press {
+    width: 500px;
+  }
+
+  .searchbar {
+    padding: 7.5px;
+  }
+
+  #error-msg-search {
+    margin-left: 4.5%;
+    padding: 7.5px;
+  }
+
   .local-city-p {
     font-size: 24px;
   }
 
   .daily-weather-cont {
     font-size: 18px;
-    max-width: 400px;
+    max-width: 900px;
   }
 }
 
@@ -544,7 +575,10 @@ footer {
 
   .drop-down-menu {
     margin: 100px auto;
-    width: 350px;
+  }
+
+  .press {
+    width: 750px;
   }
 
   .temp-scales p {
@@ -566,7 +600,7 @@ footer {
 
   .daily-weather-cont {
     font-size: 20px;
-    max-width: 500px;
+    max-width: 1000px;
   }
 
   .searchbar {
@@ -577,9 +611,14 @@ footer {
     font-size: 10px;
   }
 
+  .searchbar {
+    padding: 10px;
+  }
+
   #error-msg-search {
     padding: 10px;
     font-size: 10px;
+    margin-left: 4.6%;
   }
 
   .header-links a {
@@ -590,6 +629,11 @@ footer {
 @media only screen and (min-width: 1920px) {
   .slide img {
     height: 800px;
+  }
+
+  .daily-weather-cont {
+    font-size: 24px;
+    max-width: 1450px;
   }
 }
 

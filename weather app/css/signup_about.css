@@ -22,7 +22,7 @@
  
  .madeby-p a {
    text-decoration: none;
-   color: #1323FB;
+   color: #EBEBEB;
  }
  
  .signin-head {
@@ -81,7 +81,14 @@
    background: transparent;
    border: 0;
    font-family: 'Titan One', cursive;
-   color: #1323FB;
+   color: #fff;
  }
+
+ footer {
+  position: absolute;
+   bottom: 0;
+   width: 100%;
+   margin-bottom: -250px;
+}
  
  /* end of about page styling + signin page styling */

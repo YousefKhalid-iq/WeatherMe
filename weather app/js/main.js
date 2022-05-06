@@ -87,6 +87,12 @@ function showWeatherData (data){
         <p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
         <p class="break-p">||</p>
         <p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
+				<p class="break-p">||</p>
+			  <p ${'class="max-weather humidity"'}>Humidity: ${day.humidity}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].main}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].description}</p>
 			`
 		} else {
 			otherDayForcast +=
@@ -97,6 +103,12 @@ function showWeatherData (data){
 				<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
 				<p class="break-p">||</p>
 				<p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather humidity"'}>Humidity: ${day.humidity}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].main}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].description}</p>
 			</div>
 		`
 		}
@@ -326,26 +338,39 @@ let errorMsg = document.getElementById('error-msg-search');
 function showWeatherSearch(data){
 	let otherDayForcast = '';
 	data.daily.forEach((day, idx) => {
-	if(idx == 0){
-		currentTempEl.innerHTML = `
-		<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
-			<img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
-			<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
-			<p class="break-p">||</p>
-			<p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
-		`
-	} else {
-		otherDayForcast +=
-		`
-		<div class="daily-weather-cont">
+		if(idx == 0){
+			currentTempEl.innerHTML = `
 			<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
-			<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
-			<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
-			<p class="break-p">||</p>
-			<p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
-		</div>
-	`
-	}
+			<img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
+        <p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
+        <p class="break-p">||</p>
+        <p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
+				<p class="break-p">||</p>
+			  <p ${'class="max-weather humidity"'}>Humidity: ${day.humidity}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].main}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].description}</p>
+
+			`
+		} else {
+			otherDayForcast +=
+			`
+			<div class="daily-weather-cont">
+				<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
+				<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
+				<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
+				<p class="break-p">||</p>
+				<p ${'class="min-weather"'}>${day.temp.min + tempScale}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather humidity"'}>Humidity: ${day.humidity}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].main}</p>
+				<p class="break-p">||</p>
+				<p ${'class="max-weather description"'}>${day.weather[0].description}</p>
+			</div>
+		`
+		}
 })
   weatherForecastEl.innerHTML = otherDayForcast;
 }
@@ -367,7 +392,7 @@ function showWeatherSearch(data){
 			})
 		})
 		.catch(err => searchBar.value="",
-		errorMsg.style.backgroundColor='#ec6e4c',
+		errorMsg.style.backgroundColor='#f29941',
 		errorMsg.innerHTML = "You've entered an invalid city name, please try again")
 	})
 
