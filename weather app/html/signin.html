@@ -38,7 +38,7 @@
           <a href="about.html">About</a>
         </li>
         <li>
-          <a href="#">Sign In</a>
+          <a href="signin.html">Sign In</a>
         </li>
       </ul>
     </div>
@@ -47,19 +47,25 @@
     <section class="main-content-signin">
       <h2 class="signin-head">Sign In</h2>
       <form action="" class="signin-form">
-          <label for="name" class="email-label">Email</label>
-          <input type="email" id="email" name="name" required>
+        <div class="form-name">
+          <label for="first_name" class="first-name-label">First Name</label>
+          <input type="text" id="first-name" onkeydown="return /[a-z]/i.test(event.key)" required>
+          <label for="last_name" class="last-name-label">Last Name</label>
+          <input type="text" id="last-name" onkeydown="return /[a-z]/i.test(event.key)" required>
+        </div>
+          <label for="email" class="email-label">Email</label>
+          <input type="email" id="email" name="email" required>
           <label for="password" class="password-label">Password</label>
           <input type="password" id="password" name="password" required>
           <label for="password" class="re-password-label">Re-Enter Password</label>
           <input type="password" id="re-password" required>
-          <div>
+          <div class="sign-in-btn-cont">
             <button class="sign-in-btn" type="submit">Sign In</button>
           </div>
       </form>
       <div class="signup-cont">
         <p class="no-acc-p">Don't have an account?</p>
-        <button class="sign-up-btn">Sign up</button>
+        <button id="sign-up-btn" class="sign-up-btn">Sign Up</button>
       </div>
     </section>
   </main>
@@ -100,7 +106,6 @@
       @Copyright 2022
     </p>
   </footer>
-  <script src="/weather app/js/about.js"></script>
   <script src="/weather app/js/signin.js"></script>
 </body>
 </html>

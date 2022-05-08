@@ -3,92 +3,159 @@
 .main-content-about, .main-content-signin {
   border-top: medium solid #3B3A3A;
   padding: 100px 0;
- }
+}
  
- .about-desc, .madeby-p {
-   font-family: 'Titan One', cursive;
-   color:#3B3A3A;
-   font-size: 20px;
-   width: 80%;
-   text-align: center;
-   margin: 0 auto;
-   line-height: 1.8rem;
- }
- 
- .madeby-p {
-   font-size: 14px;
-   padding-top: 20px;
- }
- 
- .madeby-p a {
-   text-decoration: none;
-   color: #EBEBEB;
- }
- 
- .signin-head {
-   font-family: 'Titan One', cursive;
-   color:#3B3A3A;
-   text-align: left;
-   font-size: 20px;
-   margin-left: 5%;
- }
- 
- .signin-form {
-   width: 90%;
-   margin: 20px auto;
-   background-color: #EBEBEB;
-   border-radius: 5px;
-   box-shadow: 0px 5px 10px #A2A2A2;
-   padding: 10px;
-   font-size: 14px;
-   display: flex;
-   flex-direction: column;
- }
- 
- .email-label, .password-label, .re-password-label {
-   font-family: 'Titan One', cursive;
-   color:#3B3A3A;
-   width: 100%;
- }
- 
- #email, #password, #re-password {
-   width: 200px;
-   margin: 10px 0;
- }
- 
- .sign-in-btn {
-   width: 200px;
-   background-color: #fff;
-   border: 0;
-   border-radius: 50px;
-   padding: 10px;
- }
- 
- .signup-cont {
-   font-family: 'Titan One', cursive;
-   color:#3B3A3A;
-   display: flex;
-   justify-content: left;
-   font-size: 14px;
-   margin-left: 5%;
- }
- 
- .no-acc-p {
-   padding-right: 10px;
- }
- 
- .sign-up-btn {
-   background: transparent;
-   border: 0;
-   font-family: 'Titan One', cursive;
-   color: #fff;
- }
+.about-desc, .madeby-p {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.8rem;
+}
 
- footer {
+.madeby-p {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.madeby-p a {
+  text-decoration: none;
+  color: #EBEBEB;
+}
+
+.signin-head {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  text-align: left;
+  font-size: 20px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.signin-form {
+  width: 250px;
+  margin: 20px auto;
+  background-color: #EBEBEB;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px #A2A2A2;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-label, .password-label, .re-password-label, .first-name-label, .last-name-label {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+
+.email-label, .password-label, .re-password-label {
+  margin: 0 auto;
+}
+
+#email, #password, #re-password, #first-name, #last-name {
+  width: 200px;
+  margin: 10px auto;
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  border: 1px solid #666;
+  padding: 4px;
+}
+
+#email:focus, #password:focus, #re-password:focus, #first-name:focus, #last-name:focus {
+  outline-width: 0.1rem;
+  outline-color:#f29941;
+}
+
+.sign-in-btn-cont {
+  margin: 0 auto;
+  width: 120px;
+}
+
+.sign-in-btn {
+  width: 120px;
+  background-color: #666;
+  border: 0;
+  border-radius: 50px;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Titan One', cursive;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign-in-btn:hover {
+  background-color: #f29941;
+  color:#3B3A3A;
+}
+
+.form-name {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.signup-cont {
+  font-family: 'Titan One', cursive;
+  color:#3B3A3A;
+  display: flex;
+  justify-content: left;
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+.no-acc-p {
+  padding-right: 10px;
+}
+
+.sign-up-btn {
+  background: transparent;
+  border: 0;
+  font-family: 'Titan One', cursive;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-up-btn:hover {
+  color: #3B3A3A;
+  text-decoration: underline;
+}
+
+footer {
   position: absolute;
-   bottom: 0;
-   width: 100%;
-   margin-bottom: -250px;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-height: 768px) {
+  footer {
+    margin-bottom: -300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .email-label, .password-label, .re-password-label, .first-name-label, .last-name-label {
+    width: 260px;
+  }
+
+  #email, #password, #re-password, #first-name, #last-name {
+    width: 260px;
+  }
+
+  .signin-head {
+    width: 350px;
+  }
+
+  .signin-form {
+    width: 350px;
+  }
 }
  
  /* end of about page styling + signin page styling */
