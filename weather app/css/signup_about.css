@@ -98,9 +98,7 @@
 }
 
 .form-name {
-  height: 0;
-  width: 0;
-  visibility: hidden;
+  display: none;
   text-align: center;
 }
 
@@ -115,11 +113,19 @@
   position: relative;
 }
 
+.form-control.success input {
+  border-color: #2ecc71 !important;
+}
+
+.form-control.error input {
+  border-color: #e74c3c !important;
+}
+
 .icons {
+  position: relative;
   text-align: left;
   margin: 0 auto;
   width: 200px;
-  position: relative;
   margin-bottom: 5px;
 }
 
@@ -127,6 +133,29 @@
   position: absolute;
   bottom: 24px;
   right: 5px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.icons small {
+  font-family: 'Trocchi', serif;
+  color: #3B3A3A;
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
 }
 
 .signup-cont {

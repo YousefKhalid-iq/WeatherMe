@@ -47,44 +47,54 @@
   <main>
     <section class="main-content-signin">
       <h2 class="signin-head">Sign In</h2> 
-      <form action="" class="signin-form">
+      <form action="" id="form" class="signin-form">
         <div class="form-name">
-          <label for="first-name" class="first-name-label">First Name</label>
-          <input type="text" id="first-name" onkeydown="return /[a-z]/i.test(event.key)" required>
-          <div class="icons">
-            <i class="fas far fa-check-circle icon"></i>
-            <i class="fas fa-exclamation icon"></i>
-            <small>Error message</small>
+          <div class="form-control">
+            <label for="first-name" class="first-name-label">First Name</label>
+            <input type="text" class="form-input" id="first-name" onkeydown="return /[a-z]/i.test(event.key)">
+            <div class="icons">
+              <i class="fas far fa-check-circle icon"></i>
+              <i class="fas fa-exclamation-circle icon"></i>
+              <small class="small">Error message</small>
+            </div>
           </div>
-          <label for="last-name" class="last-name-label">Last Name</label>
-          <input type="text" id="last-name" onkeydown="return /[a-z]/i.test(event.key)" required>
-          <div class="icons">
-            <i class="fas far fa-check-circle icon"></i>
-            <i class="fas fa-exclamation icon"></i>
-            <small>Error message</small>
+          <div class="form-control">
+            <label for="last-name" class="last-name-label">Last Name</label>
+            <input type="text" class="form-input" id="last-name" onkeydown="return /[a-z]/i.test(event.key)">
+            <div class="icons">
+              <i class="fas far fa-check-circle icon"></i>
+              <i class="fas fa-exclamation-circle icon"></i>
+              <small class="small">Error message</small>
+           </div>
           </div>
         </div>
         <div class="form-email-password">
-          <label for="email" class="email-label">Email</label>
-          <input type="email" id="email" name="email" required>
-          <div class="icons">
-            <i class="fas far fa-check-circle icon"></i>
-            <i class="fas fa-exclamation icon"></i>
-            <small>Error message</small>
+          <div class="form-control">
+            <label for="email" class="email-label">Email</label>
+            <input type="email" class="form-input" id="email" name="email" required>
+            <div class="icons">
+              <i class="fas far fa-check-circle icon"></i>
+              <i class="fas fa-exclamation-circle icon"></i>
+              <small class="small">Error message</small>
+            </div>
           </div>
-          <label for="password" class="password-label">Password</label>
-          <input type="password" id="password" name="password" required>
-          <div class="icons">
-            <i class="fas far fa-check-circle icon"></i>
-            <i class="fas fa-exclamation icon"></i>
-            <small>Error message</small>
+          <div class="form-control">
+            <label for="password" class="password-label">Password</label>
+            <input type="password" class="form-input" id="password" name="password" required>
+            <div class="icons">
+              <i class="fas far fa-check-circle icon"></i>
+              <i class="fas fa-exclamation-circle icon"></i>
+              <small class="small">Error message</small>
+            </div>
           </div>
-          <label for="re-password" class="re-password-label">Re-Enter Password</label>
-          <input type="password" id="re-password" required>
-          <div class="icons">
-            <i class="fas far fa-check-circle icon"></i>
-            <i class="fas fa-exclamation icon"></i>
-            <small>Error message</small>
+          <div class="form-control">
+            <label for="re-password" class="re-password-label">Re-Enter Password</label>
+            <input type="password" class="form-input" id="re-password" required>
+            <div class="icons">
+              <i class="fas far fa-check-circle icon"></i>
+              <i class="fas fa-exclamation-circle icon"></i>
+              <small class="small">Error message</small>
+            </div>
           </div>
         </div>
           <div class="sign-in-btn-cont">
