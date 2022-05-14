@@ -207,7 +207,7 @@ nav {
   font-size: 8px;
   text-align: left;
   width: 80%;
-  margin-left: 4%;
+  margin-left: 10px;
   box-shadow: #A2A2A2 0px 0px 10px;
   padding: 5px;
   transition: all 0.3s ease-in-out;
@@ -554,7 +554,7 @@ footer {
   }
 
   #error-msg-search {
-    margin-left: 4.5%;
+    margin-left: 22px;
     padding: 7.5px;
   }
 
@@ -568,17 +568,72 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  .slide img {
-    height: 750px;
+@media only screen and (min-width: 960px) {
+  header {
+    display: flex;
+    background-image: linear-gradient(90deg,rgba(238, 168, 73, 0.85), rgba(242, 153, 65, 0.85));
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+  }
+
+  nav {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .toggle-on-cont, .toggle-off-cont {
+    display: none;
   }
 
   .drop-down-menu {
-    margin: 100px auto;
+    width: 75%;
+    position: relative;
+    opacity: 1;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    transition: none;
+    padding: 0;
+    flex: 2.5;
   }
 
-  .press {
-    width: 750px;
+  .temp-scales {
+    margin-top: 25px;
+  }
+
+  #error-msg-search {
+    margin-left: 4.3%;
+  }
+
+  .header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-links li {
+    padding: 0 10px;
+  }
+
+  .header-links a:hover {
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .slide img {
+    height: 750px;
   }
 
   .temp-scales p {
@@ -603,22 +658,12 @@ footer {
     max-width: 1000px;
   }
 
-  .searchbar {
-    padding: 10px;
+  #error-msg-search {
+    margin-left: 4.6%;
   }
 
   .searchbar::-webkit-input-placeholder {
     font-size: 10px;
-  }
-
-  .searchbar {
-    padding: 10px;
-  }
-
-  #error-msg-search {
-    padding: 10px;
-    font-size: 10px;
-    margin-left: 4.6%;
   }
 
   .header-links a {

@@ -375,7 +375,7 @@ function showWeatherSearch(data){
   weatherForecastEl.innerHTML = otherDayForcast;
 }
 
-	searchBtn.addEventListener('click', function lmao() {
+	searchBtn.addEventListener('click', function searchEvent() {
 		fetch('https://api.openweathermap.org/data/2.5/weather?q='+ searchBar.value +'&appid=' + API_KEY + '')
 		.then(response => response.json())
 		.then(data => {
@@ -392,7 +392,7 @@ function showWeatherSearch(data){
 			})
 		})
 		.catch(err => searchBar.value="",
-		errorMsg.style.backgroundColor='#f29941',
+		errorMsg.style.backgroundColor='#d83131',
 		errorMsg.innerHTML = "You've entered an invalid city name, please try again")
 	})
 
