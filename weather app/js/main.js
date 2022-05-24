@@ -29,13 +29,14 @@ function btnToggle() {
 		arrow.style.transform="rotate(90deg)";
 	}
 	getWeatherData()
-	/*nycWeather()
+	nycWeather()
 	londonWeather()
 	parisWeather()
 	rioWeather()
 	dubaiWeather()
 	istanbulWeather()
-	bangkokWeather()*/
+	bangkokWeather()
+	weatherSearch()
 }
 
 // end of toggle C -> F feature //
@@ -120,8 +121,6 @@ function showWeatherData (data){
 // Calling Weather for cities in main
 
 // NYC Call
-
-/*
 
 const currentNyc = document.getElementById('nyc-temp');
 
@@ -325,8 +324,6 @@ function showWeatherBangkok (data) {
 	})
 }
 
-*/
-
 // End Calling Weather for cities in main
 
 // Search Functionality 
@@ -351,7 +348,6 @@ function showWeatherSearch(data){
 				<p ${'class="max-weather description"'}>${day.weather[0].main}</p>
 				<p class="break-p">||</p>
 				<p ${'class="max-weather description"'}>${day.weather[0].description}</p>
-
 			`
 		} else {
 			otherDayForcast +=
@@ -384,16 +380,19 @@ function showWeatherSearch(data){
 			timezone.innerHTML = data['name'] + '/' + data['sys']['country'];
 			searchBar.value = "";
 			errorMsg.style.backgroundColor='#fff';
-			//console.log(data)
 			errorMsg.innerHTML = "Make Sure To Pronounce The Names Correctly!";
+			function weatherSearch() {
 			fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latValue}&lon=${lonValue}&exclude=hourly,minutely&units=${units}&appid=${API_KEY}`)
 			.then(res => res.json()).then(data => {
 				showWeatherSearch(data)
 			})
+			}
+			searchEvent.weatherSearch = weatherSearch;
 		})
 		.catch(err => searchBar.value="",
 		errorMsg.style.backgroundColor='#d83131',
 		errorMsg.innerHTML = "You've entered an invalid city name, please try again")
+		searchEvent();
 	})
 
 // End of Search Functionality

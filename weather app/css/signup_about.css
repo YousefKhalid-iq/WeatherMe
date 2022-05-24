@@ -1,7 +1,13 @@
 /* about page styling + signin page styling */
 
+header {
+  border-bottom: medium solid #3B3A3A;
+  position: static;
+}
+
+
+
 .main-content-about, .main-content-signin {
-  border-top: medium solid #3B3A3A;
   padding: 100px 0;
 }
  
@@ -36,7 +42,6 @@
 
 .signin-form {
   width: 250px;
-  
   margin: 20px auto;
   background-color: #EBEBEB;
   border-radius: 5px;
@@ -209,6 +214,18 @@ footer {
 
   .signin-form {
     width: 350px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  nav {
+    flex: 0;
+    margin-left: 8%;
+  }
+
+  .header-links {
+    justify-content: right;
+    margin-right: 10%;
   }
 }
  
