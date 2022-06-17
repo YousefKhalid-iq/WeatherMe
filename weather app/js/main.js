@@ -29,6 +29,7 @@ function btnToggle() {
 		arrow.style.transform="rotate(90deg)";
 	}
 	getWeatherData()
+	/*
 	nycWeather()
 	londonWeather()
 	parisWeather()
@@ -36,7 +37,8 @@ function btnToggle() {
 	dubaiWeather()
 	istanbulWeather()
 	bangkokWeather()
-	weatherSearch()
+	*/
+	searchEvent()
 }
 
 // end of toggle C -> F feature //
@@ -77,8 +79,7 @@ function getWeatherData() {
 let tempScale = ' °C';
 
 function showWeatherData (data){
-
-		timezone.innerHTML = data['timezone']
+	  timezone.innerHTML = data['timezone']
 		let otherDayForcast = '';
 		data.daily.forEach((day, idx) => {
 		if(idx == 0){
@@ -99,7 +100,7 @@ function showWeatherData (data){
 			otherDayForcast +=
 			`
 			<div class="daily-weather-cont">
-				<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
+			<p class="date-p">${window.moment(day.dt*1000).format('dddd')}</p>
 				<img class="weather-icon" src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="" role="presentation">
 				<p ${'class="max-weather"'}>${day.temp.max + tempScale}</p>
 				<p class="break-p">||</p>
@@ -121,6 +122,8 @@ function showWeatherData (data){
 // Calling Weather for cities in main
 
 // NYC Call
+
+/*
 
 const currentNyc = document.getElementById('nyc-temp');
 
@@ -324,6 +327,8 @@ function showWeatherBangkok (data) {
 	})
 }
 
+*/
+
 // End Calling Weather for cities in main
 
 // Search Functionality 
@@ -370,17 +375,20 @@ function showWeatherSearch(data){
 })
   weatherForecastEl.innerHTML = otherDayForcast;
 }
-
-	searchBtn.addEventListener('click', function searchEvent() {
+searchEvent()
+  function searchEvent(){//add to func below
+	searchBtn.addEventListener('click', function () {
 		fetch('https://api.openweathermap.org/data/2.5/weather?q='+ searchBar.value +'&appid=' + API_KEY + '')
 		.then(response => response.json())
 		.then(data => {
 			let latValue = data['coord']['lat']
 			let lonValue = data['coord']['lon']
-			timezone.innerHTML = data['name'] + '/' + data['sys']['country'];
+			timezone.innerHTML = data['name'] + '/' + data['sys']['country']
 			searchBar.value = "";
+			
 			errorMsg.style.backgroundColor='#fff';
 			errorMsg.innerHTML = "Make Sure To Pronounce The Names Correctly!";
+			weatherSearch()
 			function weatherSearch() {
 			fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latValue}&lon=${lonValue}&exclude=hourly,minutely&units=${units}&appid=${API_KEY}`)
 			.then(res => res.json()).then(data => {
@@ -394,6 +402,7 @@ function showWeatherSearch(data){
 		errorMsg.innerHTML = "You've entered an invalid city name, please try again")
 		searchEvent();
 	})
+}
 
 // End of Search Functionality
 

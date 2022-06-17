@@ -21,6 +21,10 @@ header {
   line-height: 1.8rem;
 }
 
+.line-2nd {
+  padding-top: 20px;
+}
+
 .madeby-p {
   font-size: 14px;
   padding-top: 20px;
@@ -28,7 +32,13 @@ header {
 
 .madeby-p a {
   text-decoration: none;
-  color: #EBEBEB;
+  color: #87CEFA;
+  transition: all 0.3s ease-in-out;
+}
+
+.madeby-p a:hover {
+  color: #3B3A3A;
+  text-decoration: underline;
 }
 
 .signin-head {
@@ -98,7 +108,7 @@ header {
 }
 
 .sign-in-btn:hover {
-  background-color: #f29941;
+  background-color: #87CEFA;
   color:#3B3A3A;
 }
 
@@ -180,9 +190,9 @@ header {
   background: transparent;
   border: 0;
   font-family: 'Titan One', cursive;
-  color: #fff;
+  color: #87CEFA;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sign-up-btn:hover {
