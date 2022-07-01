@@ -29,7 +29,6 @@ function btnToggle() {
 		arrow.style.transform="rotate(90deg)";
 	}
 	getWeatherData()
-	/*
 	nycWeather()
 	londonWeather()
 	parisWeather()
@@ -37,7 +36,6 @@ function btnToggle() {
 	dubaiWeather()
 	istanbulWeather()
 	bangkokWeather()
-	*/
 	searchEvent()
 }
 
@@ -122,8 +120,6 @@ function showWeatherData (data){
 // Calling Weather for cities in main
 
 // NYC Call
-
-/*
 
 const currentNyc = document.getElementById('nyc-temp');
 
@@ -326,8 +322,6 @@ function showWeatherBangkok (data) {
 	}
 	})
 }
-
-*/
 
 // End Calling Weather for cities in main
 
