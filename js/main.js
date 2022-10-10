@@ -136,7 +136,7 @@ function showWeatherNyc (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentNyc.innerHTML = `
-		<img class="main-img" src="/images/main-images/nyc.jpg" alt="an image of the statue of liberty">
+		<img class="main-img" src="images/main-images/nyc.jpg" alt="an image of the statue of liberty">
       <h2 class="main-img-text">
         NYC, US
         <br>
@@ -147,7 +147,6 @@ function showWeatherNyc (data) {
 	}
 	})
 }
-
 
 // London Call
 
@@ -166,7 +165,7 @@ function showWeatherLondon (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentLondon.innerHTML = `
-		<img class="main-img" src="/images/main-images/london.jpg" alt="an image of the Big Ben">
+		<img class="main-img" src="images/main-images/london.jpg" alt="an image of the Big Ben">
     <h2 class="main-img-text">
       LONDON, UK
       <br>
@@ -195,7 +194,7 @@ function showWeatherParis (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentParis.innerHTML = `
-		<img class="main-img" src="/images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
+		<img class="main-img" src="images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
     <h2 class="main-img-text">
 		  PARIS, FRANCE
       <br>
@@ -224,7 +223,7 @@ function showWeatherRio (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentRio.innerHTML = `
-		<img class="main-img" src="/images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
+		<img class="main-img" src="images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
     <h2 class="main-img-text">
 		  RIO DE JANEIRO, BRAZIL
       <br>
@@ -253,7 +252,7 @@ function showWeatherDubai (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentDubai.innerHTML = `
-		<img class="main-img" src="/images/main-images/dubai.jpg" alt="an image of the city Dubai">
+		<img class="main-img" src="images/main-images/dubai.jpg" alt="an image of the city Dubai">
     <h2 class="main-img-text">
 		DUBAI, UAE
       <br>
@@ -282,7 +281,7 @@ function showWeatherIstanbul (data) {
 	data.daily.forEach((day, idx) => {
 	if (idx == 0) {
 		currentIstanbul.innerHTML = `
-		<img class="main-img" src="/images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
+		<img class="main-img" src="images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
     <h2 class="main-img-text">
 		ISTANBUL, TURKEY
       <br>
