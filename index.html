@@ -12,6 +12,8 @@
     @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -70,67 +72,19 @@
             <input type="radio" name="radio-btn" id="radio6">
             <input type="radio" name="radio-btn" id="radio7">
             <div id="nyc-temp" class="slide first">
-              <img class="main-img" src="images/main-images/nyc.jpg" alt="an image of the statue of liberty">
-              <h2 class="main-img-text">
-                NYC, US
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div id="london-temp" class="slide">
-              <img class="main-img" src="images/main-images/london.jpg" alt="an image of the Big Ben">
-              <h2 class="main-img-text">
-                LONDON, UK
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
+              </h2> -->
             </div>
             <div id="paris-temp" class="slide">
-              <img class="main-img" src="images/main-images/paris.jpg" alt="an image of the Eiffel Tower">
-              <h2 class="main-img-text">
-                PARIS, FRANCE
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div id="rio-temp" class="slide">
-              <img class="main-img" src="images/main-images/rio-de-janeiro.jpg" alt="an image of rio de janeiro">
-              <h2 class="main-img-text">
-                RIO DE JANEIRO, BRAZIL
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div id="dubai-temp" class="slide">
-              <img class="main-img" src="images/main-images/dubai.jpg" alt="an image of the city Dubai">
-              <h2 class="main-img-text">
-                DUBAI, UAE
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div id="istanbul-temp" class="slide">
-              <img class="main-img" src="images/main-images/istanbul.jpg" alt="an image of the city Istanbul">
-              <h2 class="main-img-text">
-                ISTANBUL, TURKEY
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div id="bangkok-temp" class="slide">
-              <img class="main-img" src="images/main-images/bangkok.jpg" alt="an image of the city Bangkok">
-              <h2 class="main-img-text">
-                BANGKOK, THAILLAND
-                <br>
-                <span id="temp-city-max">-6°C /</span>
-                <span id="temp-city-min">26°C</span>
-              </h2>
             </div>
             <div class="navigation-auto">
               <div class="auto-btn1"></div>
@@ -157,61 +111,21 @@
         <p class="local-city-p" id="local-city-p">Asia/Baghdad</p>
       </div>
       <div class="daily-weather-cont" id="current-weather">
-        <p class="date-p">Monday 4/4</p>
-        <img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-        <p id="max-temp">21°C</p>
-        <p class="break-p">||</p>
-        <p id="min-temp">-3°C</p>
       </div>
       <section class="weather-forecast" id="weather-forecast">
         <div class="daily-weather-cont" id="current-weather">
-          <p class="date-p">Monday 4/4</p>
-          <img class="weather-icon" class="weather-icon small1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">21°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Tuesday 5/4</p>
-          <img class="weather-icon" class="weather-icon small2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">18°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Wednesday 6/4</p>
-          <img class="weather-icon" class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">16°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Thursday 7/4</p>
-          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">25°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Friday 8/4</p>
-          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">3°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Saturday 9/4</p>
-          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">0°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
         <div class="daily-weather-cont">
-          <p class="date-p">Sunday 10/4</p>
-          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" role="presentation">
-          <p id="max-temp">-1°C</p>
-          <p class="break-p">||</p>
-          <p id="min-temp">-3°C</p>
         </div>
       </section>
       <section class="contact-section">
@@ -260,6 +174,4 @@
         @Copyright 2022
       </p>
     </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/main.js"></script>
 </body>
