@@ -185,7 +185,7 @@ nav {
 }
 
 .searchbar-btn {
-  padding: 3px 5px;
+  /* padding: 3px 5px;
   border: 0;
   background: 0;
   cursor: pointer;
@@ -194,7 +194,17 @@ nav {
   background-image: url('/images/search.png');
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  margin-bottom: -5px;
+  margin-bottom: -5px; */
+}
+
+.fa {
+  color: #3B3A3A;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa:hover {
+  opacity: 0.8;
 }
 
 .searchbar-btn:hover {
@@ -208,7 +218,7 @@ nav {
   font-size: 8px;
   text-align: left;
   width: 80%;
-  margin-left: 10px;
+  margin-left: 14px;
   box-shadow: #A2A2A2 0px 0px 10px;
   padding: 5px;
   transition: all 0.3s ease-in-out;
@@ -237,7 +247,7 @@ nav {
 }
 
 .header-links a:hover {
-  color: #f29941;
+  color: #87CEFA;
 }
 
 /* End of Dropdown Menu styling */
@@ -550,7 +560,7 @@ footer {
   }
 
   #error-msg-search {
-    margin-left: 22px;
+    margin-left: 40px;
     padding: 7.5px;
   }
 
@@ -608,7 +618,7 @@ footer {
   }
 
   #error-msg-search {
-    margin-left: 4.3%;
+    margin-left: 7.2%;
   }
 
   .header-links {
@@ -655,7 +665,7 @@ footer {
   }
 
   #error-msg-search {
-    margin-left: 4.6%;
+    margin-left: 8%;
   }
 
   .searchbar::-webkit-input-placeholder {
@@ -670,6 +680,10 @@ footer {
 @media only screen and (min-width: 1920px) {
   .slide img {
     height: 800px;
+  }
+
+  #error-msg-search {
+    margin-left: 8.5%;
   }
 
   .daily-weather-cont {

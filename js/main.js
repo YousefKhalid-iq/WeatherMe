@@ -327,7 +327,7 @@ function showWeatherBangkok (data) {
 // Search Functionality 
 
 const searchBar = document.getElementById('searchbar');
-const searchBtn = document.getElementById('searchbar-btn');
+const searchBtn = document.querySelector('.fa-search');
 let errorMsg = document.getElementById('error-msg-search');
 
 function showWeatherSearch(data){
