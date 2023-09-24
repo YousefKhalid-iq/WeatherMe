@@ -1,5 +1,5 @@
 # [WeatherMe](https://yousefkhalid-iq.github.io/WeatherMe/) 
-This repositary contains a weather application that allows users to view their weather<br> 
+This repository contains a weather application that allows users to view their weather<br> 
 in their current location and/or search for the current weather in other countries/cities.
 
 ## Features
